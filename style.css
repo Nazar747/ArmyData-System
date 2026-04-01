@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;700;800&display=swap");
 
 * {
   margin: 0;
@@ -63,8 +63,8 @@ ul {
 
 header nav {
   padding: 10px 0;
-  border-bottom: lightgray solid 1px;
-  border-top: lightgray solid 1px;
+  border-bottom: lightsteelblue solid 1px;
+  border-top: lightsteelblue solid 1px;
 }
 
 header nav ul {
@@ -91,10 +91,69 @@ header nav ul li a.active {
 
 main {
   padding: 30px 0;
+  max-width: 1250px;
+}
+
+main .main-content-register h2 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+main .main-content-register p {
+  font-size: 20px;
+  width: 40%;
+  margin-bottom: 30px;
+}
+
+main .main-register {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 20px;
+}
+
+main .main-register a {
+  padding: 10px 20px;
+  background-color: #ffd700;
+  border-radius: 15px;
+  transition:
+    background-color 0.4s ease,
+    color 0.4s ease;
+}
+
+main .main-register a:hover {
+  background-color: aliceblue;
+  color: #ffd700;
+}
+
+main p.main-content-warning {
+  font-size: 12px;
+  font-weight: 300;
+  width: 25%;
+}
+
+main .main-content-about-system h3 {
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+main .about-block-conteiner {
+  display: flex;
+}
+
+main .about-block {
+  width: 30%;
+  margin: 0 3%;
+  background-color: #668e16;
+  justify-content: space-between;
+  padding: 20px 30px;
+  border-radius: 16px;
 }
 
 footer {
-  border-top: lightgray solid 1px;
+  border-top: lightsteelblue solid 1px;
   padding: 20px 0;
   text-align: center;
 }
