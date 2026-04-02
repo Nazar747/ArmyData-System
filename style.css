@@ -38,6 +38,7 @@ ul {
   margin: 0 auto;
 }
 
+/*Header of site*/
 header .header-title {
   padding: 30px 0;
   display: flex;
@@ -91,6 +92,7 @@ header nav ul li a.active {
   cursor: default;
 }
 
+/*Main content index.html*/
 main.main {
   padding: 30px 0;
   max-width: 1250px;
@@ -154,8 +156,73 @@ main .about-block {
   border-radius: 16px;
 }
 
+/*Fotter of site*/
 footer {
-  border-top: lightsteelblue solid 1px;
+  border-top: lightsteelblue solid 2px;
   padding: 20px 0;
   text-align: center;
+}
+
+/*Main content register.html*/
+main.register {
+  max-width: 500px;
+  padding: 80px 0;
+  margin: 0 auto;
+}
+
+main.register h2 {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+main.register p {
+  text-align: center;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+main.register form {
+  margin: 60px auto;
+  padding: 30px 40px;
+  border-radius: 16px;
+  background: gold;
+}
+
+main.register form label {
+  color: cadetblue;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+main.register form input {
+  background-color: lightblue;
+  border-radius: 10px;
+  border: 1px solid cadetblue;
+  display: block;
+  padding: 10px 20px;
+  width: 90%;
+  outline: none;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+main.register form button {
+  display: block;
+  margin: auto;
+  margin-top: 30px;
+  padding: 10px 20px;
+  border-radius: 15px;
+  background-color: royalblue;
+  color: floralwhite;
+  transition:
+    background-color 0.4s ease,
+    color 0.4s ease;
+  border: none;
+}
+
+main.register form button:hover {
+  background-color: floralwhite;
+  color: royalblue;
 }
