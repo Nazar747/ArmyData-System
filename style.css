@@ -164,39 +164,39 @@ footer {
 }
 
 /*Main content register.html*/
-main.register {
+main.authentication {
   max-width: 500px;
   padding: 80px 0;
   margin: 0 auto;
 }
 
-main.register h2 {
+main.authentication h2 {
   text-align: center;
   font-size: 26px;
   font-weight: 700;
   margin-bottom: 10px;
 }
 
-main.register p {
+main.authentication p {
   text-align: center;
   font-size: 12px;
   font-weight: 500;
 }
 
-main.register form {
+main.authentication form {
   margin: 60px auto;
   padding: 30px 40px;
   border-radius: 16px;
-  background: gold;
+  background: rgb(255, 208, 0);
 }
 
-main.register form label {
+main.authentication form label {
   color: cadetblue;
   font-size: 14px;
   font-weight: 500;
 }
 
-main.register form input {
+main.authentication form input {
   background-color: lightblue;
   border-radius: 10px;
   border: 1px solid cadetblue;
@@ -208,7 +208,7 @@ main.register form input {
   margin-bottom: 15px;
 }
 
-main.register form button {
+main.authentication form button {
   display: block;
   margin: auto;
   margin-top: 30px;
@@ -222,7 +222,58 @@ main.register form button {
   border: none;
 }
 
-main.register form button:hover {
+main.authentication form button:hover {
   background-color: floralwhite;
   color: royalblue;
+}
+
+main.authentication form .log-in-link {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+main.authentication form .log-in-link p {
+  font-size: 14px;
+  font-weight: 400;
+  color: floralwhite;
+}
+
+main.authentication form .log-in-link a {
+  font-size: 14px;
+  font-weight: 400;
+  color: royalblue;
+}
+
+main.authentication form .log-in-link a:hover {
+  text-decoration: underline royalblue 1.5px solid;
+  text-underline-offset: 3px;
+}
+
+/*Main content log-in.html*/
+main.authentication form .register-link {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+main.authentication form .register-link p {
+  font-size: 14px;
+  font-weight: 400;
+  color: floralwhite;
+}
+
+main.authentication form .register-link a {
+  font-size: 14px;
+  font-weight: 400;
+  color: royalblue;
+}
+
+main.authentication form .register-link a:hover {
+  text-decoration: underline royalblue 1.5px solid;
+  text-underline-offset: 3px;
 }
