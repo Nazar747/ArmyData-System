@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Особистий кабінет - ArmyData System</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="main header">
+            <div class="header-title">
+                <img src="/img/tryzub.png" alt="tryzub">
+
+                <div class="header-title-text">
+                    <h1>ДЕРЖАВНИЙ РЕЄСТР ОСОБОВОГО СКЛАДУ</h1>
+                    <h2>Міністрерство Оборони України</h2>
+                </div>
+
+                <img src="/img/logo_mdu.png" alt="logo MDU">
+            </div>
+
+            <nav class="header-nav">
+                <ul class="nav-menu">
+                    <li><a href="/">Головна</a></li>
+                    <li><a href="#">Реєстр бійців</a></li>
+                    <li><a href="#" class="active">Особистий кабінет</a></li>
+                    <li><a href="/log-in">Увійти в систему</a></li>
+                    <li><a href="/register">Зареєструватися</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="profile">
+            <h2>Особистий кабінет</h2>
+            <div class="profile-form">
+                <div class="photo-frame">
+                    <img src="/img/profile_photo.jpg" alt="profile photo" width="240" height="250">
+                </div>
+
+                <div class="profile-datas">
+                    <form>
+                        <label for="first-name">Ім'я</label>
+                        <input id="first-name" type="text" placeholder="ім'я">
+
+                        <label for="last-name">Прізвище</label>
+                        <input id="last-name" type="text" placeholder="прізвище">
+
+                        <label for="middle-name">По батькові</label>
+                        <input id="middle-name" type="text" placeholder="по батькові">
+
+                        <label for="number-phone">Номер телефону</label>
+                        <input id="number-phone" type="tel" placeholder="тел.">
+
+                        <label for="email">Email Адреса</label>
+                        <input id="email" type="email" placeholder="email">
+
+                        <button type="submit">Зберегти зміни</button>
+                    </form>
+                </div>
+            </div>
+        </main>
+
+        <footer class="main footer">
+            <p>© 2026 АС «ArmyData System» · Міністерство оборони України</p>
+        </footer>
+    </div>
+</body>
+
+</html>

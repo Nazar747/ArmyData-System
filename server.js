@@ -18,6 +18,10 @@ app.get('/log-in', (req, res) => {
     res.sendFile(path.join(__dirname, 'views', 'log-in.html'))
 })
 
+app.get('/profile', (req, res) => {
+    res.sendFile(path.join(__dirname, 'views', 'profile.html'))
+})
+
 app.listen(PORT, () => {
     console.log(`Система ArmyData запущена: http://localhost:${PORT}`)
 })

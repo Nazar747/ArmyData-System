@@ -1,3 +1,4 @@
+/* #region body*/
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;700;800&display=swap");
 
 * {
@@ -37,8 +38,9 @@ ul {
   width: 1400px;
   margin: 0 auto;
 }
+/* #endregion body*/
 
-/*Header of site*/
+/* #region header*/
 header .header-title {
   padding: 30px 0;
   display: flex;
@@ -91,8 +93,9 @@ header nav ul li a.active {
   border-bottom: #ffd700 solid 1px;
   cursor: default;
 }
+/* #endregion header*/
 
-/*Main content index.html*/
+/* #region index.html*/
 main.main {
   padding: 30px 0;
   max-width: 1250px;
@@ -150,20 +153,22 @@ main .about-block-conteiner {
 main .about-block {
   width: 30%;
   margin: 0 3%;
-  background-color: #668e16;
+  background-color: #597c14;
   justify-content: space-between;
   padding: 20px 30px;
   border-radius: 16px;
 }
+/* #endregion index.html*/
 
-/*Fotter of site*/
+/* #region footer*/
 footer {
   border-top: lightsteelblue solid 2px;
   padding: 20px 0;
   text-align: center;
 }
+/* #endregion footer*/
 
-/*Main content register.html*/
+/* #region register.html*/
 main.authentication {
   max-width: 500px;
   padding: 80px 0;
@@ -184,14 +189,14 @@ main.authentication p {
 }
 
 main.authentication form {
-  margin: 60px auto;
+  margin: 50px auto;
   padding: 30px 40px;
   border-radius: 16px;
-  background: rgb(255, 208, 0);
+  background-color: #597c14;
 }
 
 main.authentication form label {
-  color: cadetblue;
+  color: rgb(255, 208, 0);
   font-size: 14px;
   font-weight: 500;
 }
@@ -214,7 +219,7 @@ main.authentication form button {
   margin-top: 30px;
   padding: 10px 20px;
   border-radius: 15px;
-  background-color: royalblue;
+  background-color: rgb(255, 208, 0);
   color: floralwhite;
   transition:
     background-color 0.4s ease,
@@ -224,7 +229,7 @@ main.authentication form button {
 
 main.authentication form button:hover {
   background-color: floralwhite;
-  color: royalblue;
+  color: rgb(255, 208, 0);
 }
 
 main.authentication form .log-in-link {
@@ -244,15 +249,16 @@ main.authentication form .log-in-link p {
 main.authentication form .log-in-link a {
   font-size: 14px;
   font-weight: 400;
-  color: royalblue;
+  color: rgb(255, 208, 0);
 }
 
 main.authentication form .log-in-link a:hover {
-  text-decoration: underline royalblue 1.5px solid;
+  text-decoration: underline rgb(255, 208, 0) 1.5px solid;
   text-underline-offset: 3px;
 }
+/* #endregion register.html*/
 
-/*Main content log-in.html*/
+/* #region log-in.html*/
 main.authentication form .register-link {
   display: flex;
   justify-content: flex-end;
@@ -270,10 +276,80 @@ main.authentication form .register-link p {
 main.authentication form .register-link a {
   font-size: 14px;
   font-weight: 400;
-  color: royalblue;
+  color: rgb(255, 208, 0);
 }
 
 main.authentication form .register-link a:hover {
-  text-decoration: underline royalblue 1.5px solid;
+  text-decoration: underline rgb(255, 208, 0) 1.5px solid;
   text-underline-offset: 3px;
 }
+/* #endregion log-in.html*/
+
+/* #region profile.html*/
+main.profile {
+  max-width: 800px;
+  padding: 40px 0;
+  margin: 0 auto;
+}
+
+main.profile h2 {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+main.profile .profile-form {
+  display: flex;
+  background-color: #597c14;
+  padding: 20px 30px;
+  border-radius: 16px;
+  gap: 20px;
+}
+
+main.profile .profile-form div {
+  width: 50%;
+  justify-content: space-between;
+}
+
+main.profile img {
+  border-radius: 16px;
+}
+
+main.profile form label {
+  color: rgb(255, 208, 0);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+main.profile form input {
+  background-color: lightblue;
+  border-radius: 10px;
+  border: 1px solid cadetblue;
+  display: block;
+  width: 90%;
+  padding: 10px 20px;
+  outline: none;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+main.profile form button {
+  display: block;
+  margin: auto;
+  margin-top: 30px;
+  padding: 10px 20px;
+  border-radius: 15px;
+  background-color: rgb(255, 208, 0);
+  color: floralwhite;
+  transition:
+    background-color 0.4s ease,
+    color 0.4s ease;
+  border: none;
+}
+
+main.profile form button:hover {
+  background-color: floralwhite;
+  color: rgb(255, 208, 0);
+}
+/* #endregion profile.html*/
