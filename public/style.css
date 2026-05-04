@@ -160,14 +160,6 @@ main .about-block {
 }
 /* #endregion index.html*/
 
-/* #region footer*/
-footer {
-  border-top: lightsteelblue solid 2px;
-  padding: 20px 0;
-  text-align: center;
-}
-/* #endregion footer*/
-
 /* #region register.html*/
 main.authentication {
   max-width: 500px;
@@ -353,3 +345,11 @@ main.profile form button:hover {
   color: rgb(255, 208, 0);
 }
 /* #endregion profile.html*/
+
+/* #region footer*/
+footer {
+  border-top: lightsteelblue solid 2px;
+  padding: 20px 0;
+  text-align: center;
+}
+/* #endregion footer*/
