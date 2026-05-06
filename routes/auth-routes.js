@@ -10,7 +10,7 @@ router.post('/login', (req, res) => {
 })
 
 router.get('/logout', (req, res) => {
-    req.json({message: 'Вихід працює!'})
+    res.json({message: 'Вихід працює!'})
 })
 
 module.exports = router
