@@ -3,13 +3,18 @@ const path = require('path')
 const mongoose = require('mongoose')
 require('dotenv').config()
 
+const auth_routes = require('./routes/auth-routes')
+const fighter_routes = require('./routes/fighter-routes')
+
 const app = express()
 const PORT = process.env.PORT || 3000
 
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
-
 app.use(express.static(path.join(__dirname, 'public')))
+
+app.use('/api/auth', auth_routes)
+app.use('/api/fighters', fighter_routes)
 
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'views', 'index.html'))
@@ -25,6 +30,10 @@ app.get('/log-in', (req, res) => {
 
 app.get('/profile', (req, res) => {
     res.sendFile(path.join(__dirname, 'views', 'profile.html'))
+})
+
+app.get('/fighters', (req, res) => {
+    res.sendFile(path.join(__dirname, 'views', 'fighters.html'))
 })
 
 const connect_db = async () => {
