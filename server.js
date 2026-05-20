@@ -1,6 +1,8 @@
 const express = require('express')
 const path = require('path')
 const mongoose = require('mongoose')
+const session = require('express-session')
+const MongoStore = require('connect-mongo')
 require('dotenv').config()
 
 const auth_routes = require('./routes/auth-routes')
@@ -12,6 +14,21 @@ const PORT = process.env.PORT || 3000
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 app.use(express.static(path.join(__dirname, 'public')))
+app.use(session({
+    secret: process.env.SESSION_SECRET,
+
+    resave: false,
+
+    saveUninitialized: false,
+
+    store: MongoStore.create({
+        mongoUrl: process.env.MONGO_URI
+    }),
+
+    cookie: {
+        maxAge: 1000 * 60 * 60 * 24
+    }
+}))
 
 app.use('/api/auth', auth_routes)
 app.use('/api/fighters', fighter_routes)
