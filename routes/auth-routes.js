@@ -1,9 +1,8 @@
 const { Router } = require('express')
 const router = Router()
+const { register } = require('../controllers/auth-controller')
 
-router.post('/register', (req, res) => {
-    res.json({message: 'Реєстрація працює!'})
-})
+router.post('/register', register)
 
 router.post('/login', (req, res) => {
     res.json({message: 'Вхід працює!'})
