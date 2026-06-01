@@ -1,15 +1,9 @@
-const { Router } = require('express')
-const router = Router()
-const { register } = require('../controllers/auth-controller')
+const { Router } = require("express");
+const router = Router();
+const { register, login, logout } = require("../controllers/auth-controller");
 
-router.post('/register', register)
+router.post("/register", register);
+router.post("/login", login);
+router.get("/logout", logout);
 
-router.post('/login', (req, res) => {
-    res.json({message: 'Вхід працює!'})
-})
-
-router.get('/logout', (req, res) => {
-    res.json({message: 'Вихід працює!'})
-})
-
-module.exports = router
+module.exports = router;

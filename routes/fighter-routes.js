@@ -1,24 +1,21 @@
-const { Router } = require('express')
-const router = Router()
+const { Router } = require("express");
+const router = Router();
+const {
+  get_fighters,
+  get_fighter,
+  add_fighter,
+  update_fighter,
+  delete_fighter,
+} = require("../controllers/fighter-controller");
 
-router.get('/', (req, res) => {
-    res.json({message: 'Список бійців працює!'})
-})
+router.get("/", get_fighters);
 
-router.get('/:id', (req, res) => {
-    res.json({message: 'Один боєць працює!'})
-})
+router.get("/:id", get_fighter);
 
-router.post('/', (req, res) => {
-    res.json({message: 'Додавання бійця працює!'})
-})
+router.post("/", add_fighter);
 
-router.put('/:id', (req, res) => {
-    res.json({message: 'Редагування бійця працює!'})
-})
+router.put("/:id", update_fighter);
 
-router.delete('/:id', (req, res) => {
-    res.json({message: 'Видалення бійця працює!'})
-})
+router.delete("/:id", delete_fighter);
 
-module.exports = router
+module.exports = router;
