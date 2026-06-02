@@ -7,15 +7,17 @@ const {
   update_fighter,
   delete_fighter,
 } = require("../controllers/fighter-controller");
+const auth_middleware = require("../middleware/auth-middleware");
+const admin_middleware = require("../middleware/admin-middleware");
 
-router.get("/", get_fighters);
+router.get("/", auth_middleware, get_fighters);
 
-router.get("/:id", get_fighter);
+router.get("/:id", auth_middleware, get_fighter);
 
-router.post("/", add_fighter);
+router.post("/", auth_middleware, admin_middleware, add_fighter);
 
-router.put("/:id", update_fighter);
+router.put("/:id", auth_middleware, admin_middleware, update_fighter);
 
-router.delete("/:id", delete_fighter);
+router.delete("/:id", auth_middleware, admin_middleware, delete_fighter);
 
 module.exports = router;
