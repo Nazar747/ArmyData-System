@@ -35,32 +35,24 @@
 
         <main class="profile">
             <h2>Особистий кабінет</h2>
-            <div class="profile-form">
-                <div class="photo-frame">
-                    <img src="/img/profile_photo.jpg" alt="profile photo" width="240" height="250">
-                </div>
+            <form>
+                <label for="first-name">Ім'я</label>
+                <input id="first-name" type="text" placeholder="ім'я">
 
-                <div class="profile-datas">
-                    <form>
-                        <label for="first-name">Ім'я</label>
-                        <input id="first-name" type="text" placeholder="ім'я">
+                <label for="last-name">Прізвище</label>
+                <input id="last-name" type="text" placeholder="прізвище">
 
-                        <label for="last-name">Прізвище</label>
-                        <input id="last-name" type="text" placeholder="прізвище">
+                <label for="middle-name">По батькові</label>
+                <input id="middle-name" type="text" placeholder="по батькові">
 
-                        <label for="middle-name">По батькові</label>
-                        <input id="middle-name" type="text" placeholder="по батькові">
+                <label for="number-phone">Номер телефону</label>
+                <input id="number-phone" type="tel" placeholder="тел.">
 
-                        <label for="number-phone">Номер телефону</label>
-                        <input id="number-phone" type="tel" placeholder="тел.">
+                <label for="email">Email Адреса</label>
+                <input id="email" type="email" placeholder="email">
 
-                        <label for="email">Email Адреса</label>
-                        <input id="email" type="email" placeholder="email">
-
-                        <button type="submit">Зберегти зміни</button>
-                    </form>
-                </div>
-            </div>
+                <button type="submit">Зберегти зміни</button>
+            </form>
         </main>
 
         <footer class="main footer">

@@ -32,11 +32,26 @@ ul {
     rgba(107, 142, 35, 1) 50%,
     rgba(237, 221, 83, 1) 100%
   );
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex-grow: 1;
 }
 
 .main {
   width: 1400px;
   margin: 0 auto;
+}
+
+form {
+  min-width: 400px;
+  margin: 50px auto;
+  padding: 30px 40px;
+  border-radius: 16px;
+  background-color: #597c14;
 }
 /* #endregion body*/
 
@@ -163,7 +178,7 @@ main .about-block {
 /* #region register.html*/
 main.authentication {
   max-width: 500px;
-  padding: 80px 0;
+  padding: 30px 0;
   margin: 0 auto;
 }
 
@@ -178,13 +193,6 @@ main.authentication p {
   text-align: center;
   font-size: 12px;
   font-weight: 500;
-}
-
-main.authentication form {
-  margin: 50px auto;
-  padding: 30px 40px;
-  border-radius: 16px;
-  background-color: #597c14;
 }
 
 main.authentication form label {
@@ -280,7 +288,7 @@ main.authentication form .register-link a:hover {
 /* #region profile.html*/
 main.profile {
   max-width: 800px;
-  padding: 40px 0;
+  padding: 30px 0;
   margin: 0 auto;
 }
 
@@ -288,24 +296,6 @@ main.profile h2 {
   text-align: center;
   font-size: 26px;
   font-weight: 700;
-  margin-bottom: 25px;
-}
-
-main.profile .profile-form {
-  display: flex;
-  background-color: #597c14;
-  padding: 20px 30px;
-  border-radius: 16px;
-  gap: 20px;
-}
-
-main.profile .profile-form div {
-  width: 50%;
-  justify-content: space-between;
-}
-
-main.profile img {
-  border-radius: 16px;
 }
 
 main.profile form label {
