@@ -48,7 +48,7 @@ main {
 
 form {
   min-width: 400px;
-  margin: 50px auto;
+  margin: 40px auto;
   padding: 30px 40px;
   border-radius: 16px;
   background-color: #597c14;
@@ -335,6 +335,115 @@ main.profile form button:hover {
   color: rgb(255, 208, 0);
 }
 /* #endregion profile.html*/
+
+/* #region fighters.html*/
+main.fighters {
+  margin: 0 auto;
+  padding: 30px 0;
+  width: 100%;
+  max-width: 1400px;
+  display: flex;
+  flex-direction: column;
+}
+
+main.fighters h2 {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.table-container {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  max-height: 500px;
+  border-radius: 16px;
+  border: 2px solid lightsteelblue;
+  overflow-y: auto;
+}
+
+main.fighters table {
+  width: 100%;
+  table-layout: fixed;
+  background-color: #597c14;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+main.fighters table thead {
+  position: sticky;
+  top: 0;
+  background-color: #ffd700;
+}
+
+main.fighters table th {
+  text-align: center;
+  color: #333333;
+  padding: 15px 20px;
+  font-size: 14px;
+  border: 1px solid lightsteelblue;
+}
+
+.full-name {
+  width: 18%;
+}
+
+.rank {
+  width: 8%;
+}
+
+.unit {
+  width: 14%;
+}
+
+.position {
+  width: 14%;
+}
+
+.status {
+  width: 10%;
+}
+
+.birth-date {
+  width: 12%;
+}
+
+.email {
+  width: 18%;
+}
+
+.action {
+  width: 6%;
+}
+
+main.fighters table td {
+  padding: 15px 10px;
+  font-size: 14px;
+  color: floralwhite;
+  border: 1px solid lightsteelblue;
+  overflow-wrap: break-word;
+}
+
+#add-fighter-button {
+  display: none;
+  margin: 0 auto;
+  padding: 10px 20px;
+  border-radius: 15px;
+  cursor: pointer;
+  border: none;
+  background-color: #ffd700;
+  color: floralwhite;
+  font-size: 14px;
+  font-weight: 500;
+  transition:
+    background-color 0.4s ease,
+    color 0.4s ease;
+}
+
+#add-fighter-button:hover {
+  background-color: floralwhite;
+  color: #ffd700;
+}
+/* #endregion fighters.html*/
 
 /* #region footer*/
 footer {
