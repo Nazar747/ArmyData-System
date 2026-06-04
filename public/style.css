@@ -9,7 +9,7 @@
 body {
   font-family: "Fira Sans", sans-serif;
   font-weight: 400;
-  color: black;
+  color: #333333;
 }
 
 a {
@@ -207,10 +207,12 @@ main.authentication form input {
   border: 1px solid cadetblue;
   display: block;
   padding: 10px 20px;
-  width: 90%;
+  box-sizing: border-box;
+  width: 100%;
   outline: none;
   margin-top: 5px;
   margin-bottom: 15px;
+  cursor: pointer;
 }
 
 main.authentication form button {
@@ -304,16 +306,22 @@ main.profile form label {
   font-weight: 500;
 }
 
-main.profile form input {
+main.profile form input,
+main.profile form select {
+  box-sizing: border-box;
   background-color: lightblue;
   border-radius: 10px;
   border: 1px solid cadetblue;
   display: block;
-  width: 90%;
+  width: 100%;
   padding: 10px 20px;
   outline: none;
   margin-top: 5px;
   margin-bottom: 15px;
+  cursor: pointer;
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
 }
 
 main.profile form button {
