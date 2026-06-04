@@ -17,7 +17,15 @@ const user_schema = new mongoose.Schema(
       enum: ["user", "admin"],
       default: "user",
     },
-    fullName: {
+    lastName: {
+      type: String,
+      default: "",
+    },
+    firstName: {
+      type: String,
+      default: "",
+    },
+    middleName: {
       type: String,
       default: "",
     },

@@ -3,7 +3,11 @@ const Fighter = require("../models/fighter");
 
 const register = async (req, res) => {
   try {
-    const { email, password } = req.body;
+    const { lastName, firstName, middleName, email, password } = req.body;
+
+    if (!lastName || !firstName || !middleName || !email || !password) {
+      return res.status(400).json({ message: "Заповніть всі поля" });
+    }
 
     const existing_user = await User.findOne({ email });
     if (existing_user) {
@@ -12,7 +16,13 @@ const register = async (req, res) => {
         .json({ message: "Користувач з такий email вжу існує" });
     }
 
-    const user = await User.create({ email, password });
+    const user = await User.create({
+      lastName,
+      firstName,
+      middleName,
+      email,
+      password,
+    });
 
     const fighter = await Fighter.findOne({ email });
     if (fighter) {
