@@ -1,5 +1,3 @@
-const { response } = require("express");
-
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.querySelector("form");
 
@@ -25,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    if (password.lenght < 6) {
+    if (password.length < 6) {
       alert("Пароль має бути мінімум 6 символів!");
       return;
     }

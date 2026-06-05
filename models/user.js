@@ -41,9 +41,21 @@ const user_schema = new mongoose.Schema(
       type: String,
       default: "",
     },
-    phone: {
+    status: {
       type: String,
-      default: "",
+      enum: [
+        "активний",
+        "поранений",
+        "відпустка",
+        "полон",
+        "зниклий безвісти",
+        null,
+      ],
+      default: null,
+    },
+    birthDate: {
+      type: Date,
+      default: null,
     },
   },
   {
