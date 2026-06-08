@@ -2,7 +2,15 @@ const mongoose = require("mongoose");
 
 const fighter_schema = new mongoose.Schema(
   {
-    fullName: {
+    lastName: {
+      type: String,
+      required: true,
+    },
+    firstName: {
+      type: String,
+      required: true,
+    },
+    middleName: {
       type: String,
       required: true,
     },

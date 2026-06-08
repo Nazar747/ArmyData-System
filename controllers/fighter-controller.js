@@ -27,10 +27,27 @@ const get_fighter = async (req, res) => {
 
 const add_fighter = async (req, res) => {
   try {
-    const { fullName, rank, unit, position, status, birthDate, email } =
-      req.body;
+    const {
+      lastName,
+      firstName,
+      middleName,
+      rank,
+      unit,
+      position,
+      status,
+      birthDate,
+      email,
+    } = req.body;
 
-    if (!fullName || !rank || !unit || !position || !birthDate) {
+    if (
+      !lastName ||
+      !firstName ||
+      !middleName ||
+      !rank ||
+      !unit ||
+      !position ||
+      !birthDate
+    ) {
       return res.status(400).json({ message: "Заповніть всі поля" });
     }
 
@@ -44,7 +61,9 @@ const add_fighter = async (req, res) => {
     }
 
     const fighter = await Fighter.create({
-      fullName,
+      lastName,
+      firstName,
+      middleName,
       rank,
       unit,
       position,
@@ -75,10 +94,21 @@ const update_fighter = async (req, res) => {
       return res.status(404).json({ message: "Бійця не знайдено" });
     }
 
-    const { fullName, rank, unit, position, status, birthDate, email } =
-      req.body;
+    const {
+      lastName,
+      firstName,
+      middleName,
+      rank,
+      unit,
+      position,
+      status,
+      birthDate,
+      email,
+    } = req.body;
 
-    if (fullName) fighter.fullName = fullName;
+    if (lastName) fighter.lastName = lastName;
+    if (firstName) fighter.firstName = firstName;
+    if (middleName) fighter.middleName = middleName;
     if (rank) fighter.rank = rank;
     if (unit) fighter.unit = unit;
     if (position) fighter.position = position;
@@ -86,6 +116,21 @@ const update_fighter = async (req, res) => {
     if (birthDate) fighter.birthDate = birthDate;
 
     await fighter.save();
+
+    if (fighter.user) {
+      const user = await User.findById(fighter.user);
+      if (user) {
+        if (lastName) user.lastName = lastName;
+        if (firstName) user.firstName = firstName;
+        if (middleName) user.middleName = middleName;
+        if (rank) user.rank = rank;
+        if (unit) user.unit = unit;
+        if (position) user.position = position;
+        if (status) user.status = status;
+        if (birthDate) user.birthDate = birthDate;
+        await user.save();
+      }
+    }
 
     res.status(200).json({ message: "Дані бійця оновленно", fighter });
   } catch (err) {

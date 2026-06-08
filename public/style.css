@@ -391,8 +391,16 @@ main.fighters table th {
   border: 1px solid lightsteelblue;
 }
 
-.full-name {
-  width: 18%;
+.last-name {
+  width: 8%;
+}
+
+.first-name {
+  width: 8%;
+}
+
+.middle-name {
+  width: 8%;
 }
 
 .rank {
@@ -400,11 +408,11 @@ main.fighters table th {
 }
 
 .unit {
-  width: 14%;
+  width: 12%;
 }
 
 .position {
-  width: 14%;
+  width: 12%;
 }
 
 .status {
@@ -416,7 +424,7 @@ main.fighters table th {
 }
 
 .email {
-  width: 18%;
+  width: 16%;
 }
 
 .action {
