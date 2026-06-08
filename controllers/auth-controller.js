@@ -71,4 +71,79 @@ const logout = (req, res) => {
   });
 };
 
-module.exports = { register, login, logout };
+const get_profile = async (req, res) => {
+  try {
+    const user = await User.findById(req.session.user_id);
+
+    if (!user) {
+      return res.status(404).json({ message: "Користувача не знайдено" });
+    }
+
+    res.status(200).json({
+      lastName: user.lastName,
+      firstName: user.firstName,
+      middleName: user.middleName,
+      email: user.email,
+      rank: user.rank,
+      unit: user.unit,
+      position: user.position,
+      status: user.status,
+      birthDate: user.birthDate,
+      role: user.role,
+    });
+  } catch (err) {
+    res.status(500).json({ message: "Помилка сервера: " + err.message });
+  }
+};
+
+const update_profile = async (req, res) => {
+  try {
+    const {
+      lastName,
+      firstName,
+      middleName,
+      rank,
+      unit,
+      position,
+      status,
+      birthDate,
+    } = req.body;
+
+    const user = await User.findById(req.session.user_id);
+
+    if (!user) {
+      return res.status(404).json({ message: "Користувача не знайдено" });
+    }
+
+    if (lastName) user.lastName = lastName;
+    if (firstName) user.firstName = firstName;
+    if (middleName) user.middleName = middleName;
+    if (rank) user.rank = rank;
+    if (unit) user.unit = unit;
+    if (position) user.position = position;
+    if (status) user.status = status;
+    if (birthDate) user.birthDate = birthDate;
+
+    await user.save();
+
+    const fighter = await Fighter.findOne({ email: user.email });
+
+    if (fighter) {
+      fighter.lastName = user.lastName;
+      fighter.firstName = user.firstName;
+      fighter.middleName = user.middleName;
+      fighter.rank = user.rank;
+      fighter.unit = user.unit;
+      fighter.position = user.position;
+      fighter.status = user.status;
+      fighter.birthDate = user.birthDate;
+      await fighter.save();
+    }
+
+    res.status(200).json({ message: "Профіль оновлено успішно" });
+  } catch (err) {
+    res.status(500).json({ message: "Помилка сервера: " + err.message });
+  }
+};
+
+module.exports = { register, login, logout, get_profile, update_profile };
