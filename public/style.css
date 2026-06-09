@@ -108,6 +108,10 @@ header nav ul li a.active {
   border-bottom: #ffd700 solid 1px;
   cursor: default;
 }
+
+.logout-link:hover {
+  color: red;
+}
 /* #endregion header*/
 
 /* #region index.html*/
@@ -460,6 +464,89 @@ main.fighters table td {
   color: #ffd700;
 }
 /* #endregion fighters.html*/
+
+/* #region modal*/
+.modal-overlay {
+  background-color: rgba(46, 47, 66, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  transition: opacity 0.4s ease;
+}
+
+.modal-overlay.is-open {
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.modal {
+  max-width: 800px;
+  padding: 30px 0;
+  margin: 0 auto;
+}
+
+.modal-form label {
+  color: rgb(255, 208, 0);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.modal-form input,
+.modal-form select {
+  box-sizing: border-box;
+  background-color: lightblue;
+  border-radius: 10px;
+  border: 1px solid cadetblue;
+  display: block;
+  width: 100%;
+  padding: 10px 20px;
+  outline: none;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.modal-form button {
+  display: block;
+  margin: auto;
+  margin-top: 30px;
+  padding: 10px 20px;
+  border-radius: 15px;
+  background-color: rgb(255, 208, 0);
+  color: floralwhite;
+  transition:
+    background-color 0.4s ease,
+    color 0.4s ease;
+  border: none;
+}
+
+.modal-buttons {
+  display: flex;
+}
+
+.modal-save:hover {
+  background-color: green;
+  color: rgb(255, 208, 0);
+}
+
+.modal-cancel:hover {
+  background-color: red;
+  color: rgb(255, 208, 0);
+}
+/* #endregion modal*/
 
 /* #region footer*/
 footer {
