@@ -47,7 +47,7 @@
                             <th class="status">Статус</th>
                             <th class="birth-date">Дата народження</th>
                             <th class="email">Email</th>
-                            <th class="action" id="action-header" style="display: none;">Дії</th>
+                            <th class="action" id="action-header">Дії</th>
                         </tr>
                     </thead>
                     <tbody id="fighters-list">
@@ -61,76 +61,78 @@
         <footer class="main footer">
             <p>© 2026 АС «ArmyData System» · Міністерство оборони України</p>
         </footer>
+    </div>
 
-        <div id="modal" class="modal-overlay">
-            <div class="modal">
-                <form class="modal-form">
-                    <label for="modal-last-name">Прізвище</label>
-                    <input id="modal-last-name" type="text" placeholder="прізвище">
+    <div id="modal" class="modal-overlay">
+        <div class="modal">
+            <form class="modal-form">
+                <label for="modal-last-name">Прізвище</label>
+                <input id="modal-last-name" type="text" placeholder="прізвище">
 
-                    <label for="modal-first-name">Ім'я</label>
-                    <input id="modal-first-name" type="text" placeholder="ім'я">
+                <label for="modal-first-name">Ім'я</label>
+                <input id="modal-first-name" type="text" placeholder="ім'я">
 
-                    <label for="modal-middle-name">По батькові</label>
-                    <input id="modal-middle-name" type="text" placeholder="по батькові">
+                <label for="modal-middle-name">По батькові</label>
+                <input id="modal-middle-name" type="text" placeholder="по батькові">
 
-                    <label for="modal-rank">Звання</label>
-                    <select id="modal-rank">
-                        <option value="">— Оберіть звання —</option>
-                        <option value="Працівник ЗСУ">Працівник ЗСУ</option>
-                        <option value="Солдат">Солдат</option>
-                        <option value="Старший солдат">Старший солдат</option>
-                        <option value="Молодший сержант">Молодший сержант</option>
-                        <option value="Сержант">Сержант</option>
-                        <option value="Старший сержант">Старший сержант</option>
-                        <option value="Головний сержант">Головний сержант</option>
-                        <option value="Штаб-сержант">Штаб-сержант</option>
-                        <option value="Майстер-сержант">Майстер-сержант</option>
-                        <option value="Старший майстер-сержант">Старший майстер-сержант</option>
-                        <option value="Головний майстер-сержант">Головний майстер-сержант</option>
-                        <option value="Молодший лейтенант">Молодший лейтенант</option>
-                        <option value="Лейтенант">Лейтенант</option>
-                        <option value="Старший лейтенант">Старший лейтенант</option>
-                        <option value="Капітан">Капітан</option>
-                        <option value="Майор">Майор</option>
-                        <option value="Підполковник">Підполковник</option>
-                        <option value="Полковник">Полковник</option>
-                        <option value="Бригадний генерал">Бригадний генерал</option>
-                        <option value="Генерал-майор">Генерал-майор</option>
-                        <option value="Генерал-лейтенант">Генерал-лейтенант</option>
-                        <option value="Генерал">Генерал</option>
-                    </select>
+                <label for="modal-rank">Звання</label>
+                <select id="modal-rank">
+                    <option value="">— Оберіть звання —</option>
+                    <option value="Працівник ЗСУ">Працівник ЗСУ</option>
+                    <option value="Солдат">Солдат</option>
+                    <option value="Старший солдат">Старший солдат</option>
+                    <option value="Молодший сержант">Молодший сержант</option>
+                    <option value="Сержант">Сержант</option>
+                    <option value="Старший сержант">Старший сержант</option>
+                    <option value="Головний сержант">Головний сержант</option>
+                    <option value="Штаб-сержант">Штаб-сержант</option>
+                    <option value="Майстер-сержант">Майстер-сержант</option>
+                    <option value="Старший майстер-сержант">Старший майстер-сержант</option>
+                    <option value="Головний майстер-сержант">Головний майстер-сержант</option>
+                    <option value="Молодший лейтенант">Молодший лейтенант</option>
+                    <option value="Лейтенант">Лейтенант</option>
+                    <option value="Старший лейтенант">Старший лейтенант</option>
+                    <option value="Капітан">Капітан</option>
+                    <option value="Майор">Майор</option>
+                    <option value="Підполковник">Підполковник</option>
+                    <option value="Полковник">Полковник</option>
+                    <option value="Бригадний генерал">Бригадний генерал</option>
+                    <option value="Генерал-майор">Генерал-майор</option>
+                    <option value="Генерал-лейтенант">Генерал-лейтенант</option>
+                    <option value="Генерал">Генерал</option>
+                </select>
 
-                    <label for="modal-unit">Підрозділ</label>
-                    <input id="modal-unit" type="text" placeholder="підрозділ">
+                <label for="modal-unit">Підрозділ</label>
+                <input id="modal-unit" type="text" placeholder="підрозділ">
 
-                    <label for="modal-position">Посада</label>
-                    <input id="modal-position" type="text" placeholder="посада">
+                <label for="modal-position">Посада</label>
+                <input id="modal-position" type="text" placeholder="посада">
 
-                    <label for="modal-status">Статус</label>
-                    <select id="modal-status">
-                        <option value="">— Оберіть статус —</option>
-                        <option value="активний">Активний</option>
-                        <option value="поранений">Поранений</option>
-                        <option value="відпустка">Відпустка</option>
-                        <option value="полон">Полон</option>
-                        <option value="зниклий безвісти">Зниклий безвісти</option>
-                    </select>
+                <label for="modal-status">Статус</label>
+                <select id="modal-status">
+                    <option value="">— Оберіть статус —</option>
+                    <option value="активний">Активний</option>
+                    <option value="поранений">Поранений</option>
+                    <option value="відпустка">Відпустка</option>
+                    <option value="полон">Полон</option>
+                    <option value="зниклий безвісти">Зниклий безвісти</option>
+                </select>
 
-                    <label for="modal-birth-date">Дата народження</label>
-                    <input id="modal-birth-date" type="date">
+                <label for="modal-birth-date">Дата народження</label>
+                <input id="modal-birth-date" type="date">
 
-                    <label for="modal-email">Email (необов'язково)</label>
-                    <input id="modal-email" type="email" placeholder="email">
+                <label for="modal-email">Email (необов'язково)</label>
+                <input id="modal-email" type="email" placeholder="email">
 
-                    <div class="modal-buttons">
-                        <button id="modal-save" class="modal-save" type="button">Зберегти</button>
-                        <button id="modal-cancel" class="modal-cancel" type="button">Скасувати</button>
-                    </div>
-                </form>
-            </div>
+                <div class="modal-buttons">
+                    <button id="modal-save" class="modal-save" type="button">Зберегти</button>
+                    <button id="modal-cancel" class="modal-cancel" type="button">Скасувати</button>
+                </div>
+            </form>
         </div>
     </div>
+
+    <script src="/js/fighters.js"></script>
 </body>
 
 </html>

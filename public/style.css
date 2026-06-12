@@ -390,21 +390,21 @@ main.fighters table thead {
 main.fighters table th {
   text-align: center;
   color: #333333;
-  padding: 15px 20px;
+  padding: 15px 10px;
   font-size: 14px;
   border: 1px solid lightsteelblue;
 }
 
 .last-name {
-  width: 8%;
+  width: 10%;
 }
 
 .first-name {
-  width: 8%;
+  width: 10%;
 }
 
 .middle-name {
-  width: 8%;
+  width: 10%;
 }
 
 .rank {
@@ -412,7 +412,7 @@ main.fighters table th {
 }
 
 .unit {
-  width: 12%;
+  width: 10%;
 }
 
 .position {
@@ -424,15 +424,19 @@ main.fighters table th {
 }
 
 .birth-date {
-  width: 12%;
+  width: 10%;
 }
 
 .email {
-  width: 16%;
+  width: 14%;
 }
 
 .action {
   width: 6%;
+}
+
+#action-header {
+  display: none;
 }
 
 main.fighters table td {
@@ -445,7 +449,7 @@ main.fighters table td {
 
 #add-fighter-button {
   display: none;
-  margin: 0 auto;
+  margin: auto auto 0 auto;
   padding: 10px 20px;
   border-radius: 15px;
   cursor: pointer;
@@ -480,7 +484,9 @@ main.fighters table td {
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
-  transition: opacity 0.4s ease;
+  transition:
+    opacity 0.4s ease,
+    visibility 0.4s ease;
 }
 
 .modal-overlay.is-open {
@@ -545,6 +551,45 @@ main.fighters table td {
 .modal-cancel:hover {
   background-color: red;
   color: rgb(255, 208, 0);
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.action-buttons button {
+  line-height: 0;
+  padding: 14px 10px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.button-edit {
+  color: #222222;
+  background-color: rgb(255, 208, 0);
+  transition:
+    color 0.4s ease,
+    background-color 0.4s ease;
+}
+
+.button-edit:hover {
+  color: floralwhite;
+  background-color: royalblue;
+}
+
+.button-delete {
+  color: #222222;
+  background-color: rgb(255, 208, 0);
+  transition:
+    color 0.4s ease,
+    background-color 0.4s ease;
+}
+
+.button-delete:hover {
+  color: floralwhite;
+  background-color: red;
 }
 /* #endregion modal*/
 
