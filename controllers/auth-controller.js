@@ -28,6 +28,16 @@ const register = async (req, res) => {
     if (fighter) {
       fighter.user = user._id;
       await fighter.save();
+
+      user.lastName = fighter.lastName;
+      user.firstName = fighter.firstName;
+      user.middleName = fighter.middleName;
+      user.rank = fighter.rank;
+      user.unit = fighter.unit;
+      user.position = fighter.position;
+      user.status = fighter.status;
+      user.birthDate = fighter.birthDate;
+      await user.save();
     }
 
     req.session.user_id = user._id;
