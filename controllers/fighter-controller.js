@@ -114,6 +114,14 @@ const update_fighter = async (req, res) => {
     if (position) fighter.position = position;
     if (status) fighter.status = status;
     if (birthDate) fighter.birthDate = birthDate;
+    if (email) {
+      fighter.email = email;
+
+      const user = await User.findOne({ email });
+      if (user) {
+        fighter.user = user._id;
+      }
+    }
 
     await fighter.save();
 
